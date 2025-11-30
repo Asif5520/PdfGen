@@ -1,0 +1,219 @@
+/* Reset & body */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Main wrapper */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* PDF Converter Container */
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+}
+
+/* File input */
+#imageInput {
+  margin: 15px 0;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Image preview */
+#preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#preview img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+#preview img:hover {
+  transform: scale(1.05);
+  border-color: #000;
+}
+
+/* Generate Button */
+#generateBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#generateBtn:hover:enabled {
+  background: #333;
+}
+
+#generateBtn:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* Info / SEO Section */
+.info {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.info h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 18px;
+}
+
+.info p, .info li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.info ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+}
+
+footer .footer-container p {
+  margin: 8px 0;
+}
+
+footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+footer .footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .footer-links li a:hover {
+  color: #ffcc00;
+}
+
+footer .copyright {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .container, .info {
+    max-width: 400px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  #preview img {
+    width: 70px;
+    height: 70px;
+  }
+
+  #generateBtn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .info h3 {
+    font-size: 16px;
+  }
+
+  .info p, .info li {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 20px 15px;
+  }
+}
+/* Logo + Title wrapper */
+.title-wrapper {
+  display: flex;
+  align-items: center;  /* vertically center logo and text */
+  justify-content: center; /* center horizontally */
+  gap: 10px; /* spacing between logo and title */
+  margin-bottom: 10px;
+}
+
+.title-wrapper .logo {
+  width: 40px;  /* adjust size as needed */
+  height: 40px;
+  object-fit: contain; /* keep logo proportions */
+}
+.logo{
+  border-radius: 30px;
+}
+
